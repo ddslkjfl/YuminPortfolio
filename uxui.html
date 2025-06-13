@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UXUI Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="img/logo_1.png" alt="Logo" /></div>
+    <nav class="navbar">
+      <ul class="menu">
+        <li class="menu-item"><a href="index.html">소개</a></li>
+        <li class="menu-item"><a href="#">포트폴리오</a>
+          <ul class="submenu">
+            <li><a href="uxui.html">UXUI</a></li>
+            <li><a href="move.html">영상편집</a></li>
+            <li><a href="index1.html">상세페이지</a></li>
+            <li><a href="html.html">웹페이지</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- 프로젝트 개요 -->
+    <section class="project-intro">
+      <h1>퍼스널컬러 진단 앱</h1>
+      <p class="project-desc">
+        모바일 환경에서 누구나 쉽게 퍼스널컬러를 진단하고,<br />
+        브랜드 컬러 비교까지 할 수 있는 UXUI 프로젝트입니다.
+      </p>
+      <ul class="project-meta">
+        <li><strong>역할:</strong> UX/UI 디자인, 프로토타이핑</li>
+        <li><strong>툴:</strong> Figma, Photoshop</li>
+        <li><strong>주요 기능:</strong> 진단, 비교, 브랜드 컬러 추천</li>
+      </ul>
+    </section>
+
+    <!-- 핸드폰 목업 + 버튼 + 이미지/설명 완전 분리 -->
+    <section class="mockup-section">
+      <h2>실제 기기에서 보는 UXUI</h2>
+      <div class="mockup-nav">
+        <button class="mockup-btn active" data-screen="home">홈</button>
+        <button class="mockup-btn" data-screen="start">진단 시작</button>
+        <button class="mockup-btn" data-screen="result">진단 결과</button>
+        <button class="mockup-btn" data-screen="compare">브랜드 컬러 비교</button>
+      </div>
+
+      <div class="mockup-row">
+  <!-- 이미지 영역 -->
+  <div class="mockup-img-area">
+    <!-- 홈 화면 -->
+    <div id="home-img" class="hover-image" style="display: block;">
+      <img src="img/uxui/홈.png" alt="홈 화면" class="default" />
+      <img src="img/uxui/홈1.png" alt="홈 화면 호버" class="hovered" />
+    </div>
+    <!-- 진단 시작 -->
+    <div id="start-img" class="hover-image" style="display: none;">
+      <img src="img/uxui/진단.png" alt="진단 시작 화면" class="default" />
+    </div>
+    <!-- 진단 결과 -->
+    <div id="result-img" class="hover-image" style="display: none;">
+      <img src="img/uxui/결과 내용.png" alt="진단 결과 화면" class="default" />
+      <img src="img/uxui/결과 내용1.png" alt="진단 결과 호버" class="hovered" />
+    </div>
+    <!-- 브랜드 컬러 비교 -->
+    <div id="compare-img" class="hover-image" style="display: none;">
+      <img src="img/uxui/비교.png" alt="브랜드 컬러 비교 화면" class="default" />
+    </div>
+  </div>
+  <!-- 텍스트 영역 -->
+  <div class="mockup-desc-area" id="mockup-desc">
+    <h3>홈 화면</h3>
+    <p>메인 배너, 추천 상품, 맞춤 상품, 최신 뉴스 등 다양한 정보를 한눈에 볼 수 있습니다.</p>
+  </div>
+</div>
+      <p class="mockup-caption">버튼을 누르면 이미지와 설명이 각각 따로 보입니다.</p>
+    </section>
+
+    <!-- UXUI 설계 포인트 -->
+    <section class="project-desc-section">
+      <h2>디자인 포인트</h2>
+      <ul class="desc-list">
+        <li>하단 탭바로 주요 기능에 빠르게 접근</li>
+        <li>진단 과정에서 실시간/사진 선택 등 유저 편의성 극대화</li>
+        <li>결과 화면에서 조명별, 피부별 발색을 한눈에 비교하도록 시각화</li>
+        <li>브랜드 컬러 비교는 드래그&드롭 방식으로 최대 4개 브랜드 동시 비교</li>
+        <li>심플하고 명확한 타이포그래피, 충분한 여백, 직관적인 아이콘 사용</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>전화 : 010-3017-4102 | 메일 : hym301741@gmail.com</p>
+    <p>© 2025 Yumin Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+const screens = {
+  home: {
+    desc: `<h3>홈 화면</h3><p>메인 배너, 추천 상품, 맞춤 상품, <br>최신 뉴스 등 다양한 정보를 한눈에 <br>볼 수 있습니다.<br><br><br>(이미지에 마우스를 가져다 대세요.)</p>`
+  },
+  start: {
+    desc: `<h3>진단 시작 화면</h3><p>사진 또는 실시간 촬영을 통해 <br>퍼스널컬러 진단 방식을 선택할 수 <br>있습니다.</p>`
+  },
+  result: {
+    desc: `<h3>진단 결과 상세</h3><p>눈동자색, 피부톤, 모발색, 톤맵, <br>추천 제품 등 결과를 종합적으로 <br>보여줍니다.<br><br><br>(이미지에 마우스를 가져다 대세요.)</p>`
+  },
+  compare: {
+    desc: `<h3>브랜드 컬러 비교</h3><p>최대 4개의 브랜드 컬러를 <br>한눈에 비교할 수 있습니다.</p>`
+  }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.mockup-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.mockup-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const screen = this.getAttribute('data-screen');
+      // 이미지 전환
+      ['home', 'start', 'result', 'compare'].forEach(id => {
+        document.getElementById(id + '-img').style.display = (id === screen) ? 'block' : 'none';
+      });
+      // 텍스트 전환
+      document.getElementById('mockup-desc').innerHTML = screens[screen].desc;
+    });
+  });
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>상세페이지 Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+   <link rel="stylesheet" href="css/move.css" />
+   <link rel="stylesheet" href="css/index1.css" />
+</head>
+<body></body>
+  <header class="header">
+    <div class="logo"><img src="img/logo_1.png" alt="Logo" /></div>
+    <nav class="navbar">
+      <ul class="menu">
+        <li class="menu-item"><a href="index.html">소개</a></li>
+        <li class="menu-item"><a href="#">포트폴리오</a>
+          <ul class="submenu">
+            <li><a href="uxui.html">UXUI</a></li>
+            <li><a href="move.html">영상편집</a></li>
+            <li><a href="index1.html">상세페이지</a></li>
+            <li><a href="html.html">웹페이지</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <section class="project-intro">
+      <h1>Leaf Source</h1>
+      <p class="project-desc">
+        Leaf Source는 식물 유래 성분과 피부 진정 효과를 강조한 자연주의 스킨케어 브랜드로, 지성 피부를 위한 Willow Balance 세럼을 대표 제품으로 한다.<br>
+        ‘A drop of forest, a world of calm.’ 슬로건 아래, 자연 감성을 담은 비주얼과 신뢰도 높은 임상·사용자 정보를 통해 브랜드 아이덴티티를 전달한다.
+      </p>
+      <ul class="project-meta">
+        <li><strong>역할:</strong> 브랜드 아이덴티티 구축, 제품 컨셉 개발</li>
+        <li><strong>툴:</strong> Photoshop</li>
+        <li><strong>주요 기능:</strong> 자연 유래 성분과 피부 진정 효과 강조, 지성 피부 맞춤 Willow Balance 세럼 기획, 임상·사용자 리뷰 기반 신뢰성 강화, 자연 감성 비주얼 디자인</li>
+      </ul>
+    </section>
+
+  <main class="main">
+    <!-- 프로젝트 개요 -->
+    <section class="mockup-section">
+      <h2>Leaf Source 상세페이지</h2>
+      <div class="mockup-nav">
+        <button class="mockup-btn active" data-screen="home">표지</button>
+        <button class="mockup-btn" data-screen="start">제품 소개</button>
+        <button class="mockup-btn" data-screen="result">제품 설명</button>
+        <button class="mockup-btn" data-screen="beforeafter">제품 사용 전/후</button>
+        <button class="mockup-btn" data-screen="review">리뷰</button>
+      </div>
+
+      <div class="mockup-row">
+  <!-- 이미지 영역 -->
+  <div class="mockup-img-area">
+    <!-- 홈 화면 -->
+    <div id="home-img" class="hover-image" style="display: block;">
+      <img src="img/상세페이지/1.png" alt="표지" class="default" />
+    </div>
+    <!-- 진단 시작 -->
+    <div id="start-img" class="hover-image" style="display: none;">
+      <img src="img/상세페이지/2.png" alt="제품 소개" class="default" />
+    </div>
+    <!-- 진단 결과 -->
+    <div id="result-img" class="hover-image" style="display: none;">
+      <img src="img/상세페이지/3.png" alt="제품 설명" class="default" />
+    </div>
+    <!-- 브랜드 컬러 비교 -->
+    <div id="beforeafter-img" class="hover-image" style="display: none;">
+      <img src="img/상세페이지/4.png" alt="제품 사용 전/후" class="default" />
+    </div>
+    <div id="review-img" class="hover-image" style="display: none;">
+      <img src="img/상세페이지/5.png" alt="리뷰" class="default" />
+    </div>
+  </div>
+  <!-- 텍스트 영역 -->
+
+</div>
+      <p class="mockup-caption">버튼을 누르면 이미지가 따로 보입니다.</p>
+    </section>
+
+    <!-- UXUI 설계 포인트 -->
+    <section class="project-desc-section">
+      <h2>디자인 포인트</h2>
+      <ul class="desc-list">
+        <li>버드나무 잎사귀와 드롭퍼 등 자연 그래픽 요소와 사진을 활용해 자연주의·친환경 브랜드 이미지를 강화</li>
+        <li>제품명, 타입, 타깃, 슬로건, 성분, 임상 리뷰 등 핵심 정보를 한눈에 볼 수 있도록 명확한 정보 구조 설계</li>
+        <li>타이틀(Cormorant Garamond Italic), 부제목(Josefin Sans), 본문(Myriad Pro) 등 위계에 맞는 타이포그래피로 전문성과 심미성 확보</li>
+        <li>실제 임상 리뷰, Before/After 이미지, 사용자 후기를 통해 제품 효과에 대한 객관적 신뢰성 전달</li>
+        <li>드롭퍼 병과 버드나무 잎사귀를 결합한 로고로 자연주의 철학을 직관적으로 표현</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>전화 : 010-3017-4102 | 메일 : hym301741@gmail.com</p>
+    <p>© 2025 Yumin Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.mockup-nav .mockup-btn');
+    const images = document.querySelectorAll('.mockup-img-area .hover-image');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to the clicked button
+        button.classList.add('active');
+        const screen = button.getAttribute('data-screen');
+        // Show the corresponding image and hide others
+        images.forEach(img => {
+            if(img.id === screen + '-img') {
+            img.style.display = 'block';
+            } else {
+            img.style.display = 'none';
+            }
+        });
+        });
+    });
+    });
+  </script>
+</body>
+</html>

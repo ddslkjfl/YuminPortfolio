@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>웹사이트 Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/move.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><img src="img/logo_1.png" alt="Logo" /></div>
+    <nav class="navbar">
+      <ul class="menu">
+        <li class="menu-item"><a href="index.html">소개</a></li>
+        <li class="menu-item"><a href="#">포트폴리오</a>
+          <ul class="submenu">
+            <li><a href="uxui.html">UXUI</a></li>
+            <li><a href="move.html">영상편집</a></li>
+            <li><a href="index1.html">상세페이지</a></li>
+            <li><a href="html.html">웹페이지</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- 프로젝트 개요 -->
+    <section class="project-intro">
+      <h1>학과 홈페이지 개요</h1>
+      <p class="project-desc">
+        디지털 마케팅과 미디어 콘텐츠 역량을 집중적으로 보여주는 포트폴리오 웹사이트입니다.<br>
+        최신 트렌드와 실무 중심의 디자인, UX/UI를 통해 전문성과 시각적 완성도를 강조합니다.
+      </p>
+      <ul class="project-meta">
+        <li><strong>역할:</strong> 디지털 마케팅 및 디자인 역량 시각화</li>
+        <li><strong>툴:</strong> Visual Studio Code</li>
+        <li><strong>주요 기능:</strong> 프로젝트 소개, 결과물 전시, 반응형 웹 지원</li>
+      </ul>
+    </section>
+
+    <section class="mockup-section">
+        <h2>웹사이트 제작</h2>
+        <div class="mockup-nav">
+            <button class="mockup-btn active" data-screen="home">학과 홈페이지</button>
+        </div>
+
+        <div class="mockup-row">
+            <!-- 이미지 영역 -->
+            <div class="mockup-img-area">
+            <!-- 제일기획공모전 -->
+            <div id="home-img" class="hover-image custom-hover" style="display: block;">
+                <a href="학과/index_D.html">
+                <img src="img/웹페이지/학과.png" alt="학과홈페이지" class="default" />
+                </a>
+            </div>
+            </div>
+            <!-- 텍스트 영역 -->
+            <div class="mockup-desc-area" id="mockup-desc">
+            <div id="home-desc" style="display: block;">
+                <h3>학과 홈페이지 리뉴얼</h3>
+                <p>미니멀하고 트렌디한 디자인으로 <br>학과의 정체성을 시각적으로 <br>표현하며, 학생과 방문객에게 <br>정보 탐색의 즐거움과 신뢰감을 <br>제공합니다.</p>
+            </div>
+            </div>
+        </div>
+        <p class="mockup-caption">이미지를 누르면 홈페이지로 이동하여 볼 수 있습니다.</p>
+    </section>
+
+
+    <!-- UXUI 설계 포인트 -->
+    <section class="project-desc-section">
+      <h2>디자인 포인트</h2>
+      <ul class="desc-list">
+        <li>일관된 컬러와 폰트로 브랜드 아이덴티티를 명확히 전달하는 시각적 통일성 유지</li>
+        <li>여백과 구성미를 살린 미니멀 디자인으로 콘텐츠 중심의 전문성 강조</li>
+        <li>모든 기기에서 최적화된 경험을 제공하는 반응형·모바일 친화적 웹디자인 구현</li>
+        <li>마우스 오버, 트랜지션 등의 인터랙션 요소로 사용자 참여와 몰입 유도</li>
+        <li>고해상도 이미지와 영상으로 브랜드의 품질감과 시각적 완성도 강화</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>전화 : 010-3017-4102 | 메일 : hym301741@gmail.com</p>
+    <p>© 2025 Yumin Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+const screens = {
+  home: {
+    desc: `<h3>제일기획공모전</h3><p>젊은 세대의 건강한 라이프스타일을 제안하는 브랜디드 콘텐츠 영상입니다.</p>`
+  },
+  start: {
+    desc: `<h3>교제폭력</h3><p>사회적 인식 개선과 피해자 지원을 위한 공익광고 영상입니다.</p>`
+  },
+  result: {
+    desc: `<h3>신용보증재단</h3><p>지역 상권 활성화와 소상공인 응원을 주제로 한 디지털 영상입니다.</p>`
+  }
+};
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.mockup-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.mockup-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      const screen = this.getAttribute('data-screen');
+      // 이미지 전환
+      ['home', 'start', 'result'].forEach(id => {
+        document.getElementById(id + '-img').style.display = (id === screen) ? 'block' : 'none';
+      });
+      // 텍스트 전환
+      document.getElementById('mockup-desc').innerHTML = screens[screen].desc;
+    });
+  });
+});
+  </script>
+</body>
+</html>
