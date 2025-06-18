@@ -129,12 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
       this.classList.add('active');
       const screen = this.getAttribute('data-screen');
       // 이미지 전환
-      ['home', 'start', 'result'].forEach(id => {
-        document.getElementById(id + '-img').style.display = (id === screen) ? 'block' : 'none';
+        ['home', 'start', 'result'].forEach(id => {
+        const target = document.getElementById(id + '-img'); 
+        if (target) {
+          target.style.display = (id === screen) ? 'block' : 'none';
+        } else {
+          console.warn(`❗ ID '${id}-img'를 찾을 수 없습니다.`); // 🔺 디버깅용 경고 추가
+        }
       });
-      // 텍스트 전환
-      document.getElementById('mockup-desc').innerHTML = screens[screen].desc;
-    });
   });
 });
   </script>
