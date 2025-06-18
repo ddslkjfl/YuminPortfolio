@@ -220,9 +220,13 @@ main { padding-bottom: 4rem; }
 .hover-image {
   position: relative;
   display: inline-block;
-  width: 400px;
-  height: auto;
+  width: 100%;
+  max-width: 305px;
+  height: 575px;
   overflow: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(44, 74, 54, 0.3);
+  background: #f0f4f8;
 }
 .hover-image img {
   display: block;
@@ -230,16 +234,14 @@ main { padding-bottom: 4rem; }
   height: 100%;
   object-fit: cover;
   border-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(44, 74, 54, 0.3);
-  background: #f0f4f8;
   transition: opacity 0.3s ease, transform 0.3s;
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
 }
 .hover-image img.default {
   z-index: 1;
   opacity: 1;
-  position: relative;
   transform: none;
 }
 .hover-image img.hovered {
