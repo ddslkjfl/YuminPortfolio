@@ -218,7 +218,7 @@ main { padding-bottom: 4rem; }
 
 /* hover-image 공통 효과 */
 .hover-image {
-  width: 420px;          /* 원하는 가로 길이 */
+  width: 800px;          /* 원하는 가로 길이 */
   height: 575px;         /* 원하는 세로 길이 */
   border-radius: 1.5rem;
   box-shadow: 0 4px 12px rgba(44, 74, 54, 0.3);
