@@ -637,6 +637,7 @@ header .wrapper{
 .footer-flex img {
   width: 15rem;
   display: block;
+  background-color: transparent;
 }
 .footer-info {
   display: flex;
